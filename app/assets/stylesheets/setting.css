@@ -4,7 +4,7 @@
  * ========================================================================== */
 /*
  * Correct `block` display not defined in IE 8/9. */
-article,
+/* article,
 aside,
 details,
 figcaption,
@@ -609,4 +609,4 @@ ul li {
     width: 48.2% !important;
   }
 }
-/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */ */
