@@ -2,4 +2,5 @@
  <% @tweets.each do |tweet| %>
  <P><%= tweet.text %></p>
   <% end %>
+  <%= paginate(@tweets) %>
 </div>
