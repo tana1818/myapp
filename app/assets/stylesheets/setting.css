@@ -1,3 +1,6 @@
+.brand-logo {
+  left: 44%;
+}
 .contents {
   background-color: white;
   padding: 20px;
@@ -24,11 +27,19 @@
 .left-box {
   float: left;
   margin-right: 10px;
+  font-size: 13px;
 }
 
 .user-image {
+  /* src: url('kaba.jpg'); */
   width: 30px;
   height: 30px;
+}
+
+.kaba-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
 }
 
 .right-box {
@@ -41,10 +52,15 @@
   font-size: 15px;
   text-decoration: none;
   text-decoration-color: #fff;
-  background-color: rgb(240, 233, 234);
+  background-color: rgb(245, 70, 104);
   padding: 3px;
   border-radius: 4px;
   font-weight: bold;
+  transition: 0.4s;
+}
+
+.btns:hover {
+  opacity: 0.6;
 }
 .edit-link {
   color: white;
