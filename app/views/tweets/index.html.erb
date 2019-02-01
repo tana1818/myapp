@@ -1,6 +1,24 @@
 <div class="contents row">
  <% @tweets.each do |tweet| %>
- <P><%= tweet.text %></p>
+   <div class = "tweet-box">
+
+     <div class = "left-box">
+       <div class = "user-image">
+         <img src="kaba.jpg">
+         </div>
+       <div class="name">
+          <a href=""><%= tweet.user.nickname %></a>
+       </div>
+     </div>
+
+       <div class = "right-box">
+         <P><%= tweet.text %></p>
+           <div class = "btns">
+             <%= link_to '削除', "/tweets/#{tweet.id}/destroy", class: 'edit-link', method: :delete %>
+             <%= link_to '編集', "/tweets/#{tweet.id}/edit", class: 'edit-link', method: :get %>
+             </div>
+       </div>
+    </div>
   <% end %>
   <%= paginate(@tweets) %>
 </div>
