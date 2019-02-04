@@ -6,10 +6,12 @@ class TweetsController < ApplicationController
     end
 
     def new
+      @tweet = Tweet.new
     end
 
     def create
-      Tweet.create(text: tweet_params[:text], user_id: current_user.id)
+      # Tweet.create(text: tweet_params[:text], user_id: current_user.id)
+      Tweet.create(tweet_params)
     end
 
     def destroy
@@ -30,7 +32,8 @@ class TweetsController < ApplicationController
 
     private
     def tweet_params
-      params.permit(:text)
+      # params.permit(:text)
+      params.require(:tweet).permit(:text).merge(user_id: current_user.id)
     end
 
     def move_to_index
